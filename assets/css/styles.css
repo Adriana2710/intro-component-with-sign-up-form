@@ -51,6 +51,7 @@ body {
     margin: 0 1em;
     box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
     border-radius: 10px;
+    border: none;
     font-family: var(--main-font);
     color: var(--main-color);
     font-size: 15px;
@@ -67,8 +68,7 @@ body {
     box-shadow: 0px 8px 0px rgba(0, 0, 0, 0.14688);
     border-radius: 10px;
     padding: 30px;
-    margin: 26px 16px;
-    
+    margin: 26px 16px; 
 }
 
 .trial__control {
@@ -79,16 +79,17 @@ body {
     position: absolute;
     right: 8px;
     top: 16px;
-    visibility: hidden;
+    display: none;
 }
 
 .trial__control p.trial__error-txt {
     font-size: 11px;
     color: var(--background);
-    margin: 0 0 2em 0;
-    text-align: end;
     font-style: italic;
-    visibility: hidden;
+    position: absolute;
+    right: 16px;
+    top: 50px;
+    display: none;
 }
 
 .trial__control p.trial__error-email {
@@ -98,11 +99,12 @@ body {
     position: absolute;
     left: 27px;
     top: 3px;
-    visibility: hidden;
+    display: none;
 }
 
 .trial__control.error input {
     border-color: var(--background);
+    margin-bottom: 35px;
 }
 
 .trial__control.success input {
@@ -112,7 +114,7 @@ body {
 .trial__control.error i.image-error,
 .trial__control.success i.image-success,
 .trial__control.error p {
-    visibility: visible;
+    display: block;
 }
 
 
@@ -125,7 +127,7 @@ body {
     font-size: 14px;
     color: var(--form-letters-color);
     display: block; 
-    margin: 0 auto;
+    margin: 20px auto;
     width: 100%;
 }
 
@@ -137,7 +139,9 @@ body {
     font-family: var(--main-font);
     font-size: 14px;
     font-weight: 600;
-    color: var(--secondary-color);
+    color: var(--form-letters-color);
+    mix-blend-mode: normal;
+    opacity: 0.75;
 }
 
 .trial__control.error .trial__input::placeholder {
@@ -194,11 +198,12 @@ body {
     .call__title {
         font-size: 50px;
         line-height: 55px;
+        margin: -28px 0 30px 0;
     }   
 
     .call__txt {
        padding: 0;
-       margin-right: 1em;
+       margin-right: 2em;
 
     }
 
@@ -214,7 +219,7 @@ body {
 
     .trial__form {
         width: 100%;
-        padding: 40px;
+        padding: 21px 40px 30px 40px;
     }
 
     .trial__input {
